@@ -1,13 +1,11 @@
-%cd /content/Audio-restoration
-
-cat > .gitignore << 'EOF'
-# Dati/audio (stanno su Drive, NON su GitHub)
+# Data/audio (restano su Drive)
 data/
 *.wav
 *.mp3
 *.flac
+*.ogg
 
-# Artefatti training (NON su GitHub)
+# Training artifacts (pesanti)
 checkpoints/
 models/
 results/
@@ -16,11 +14,10 @@ runs/
 *.pth
 *.ckpt
 
-# Cache / roba inutile
+# Notebook / python cache
+.ipynb_checkpoints/
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
 
-# Segreti
+# Secrets
 .env
-EOF
